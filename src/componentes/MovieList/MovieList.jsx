@@ -1,4 +1,5 @@
 import { MovieCard } from '../MovieCard/MovieCard';
+import './MovieList.css';
 
 export const MovieList = ({ movies, onSelectMovie }) => {
   return (

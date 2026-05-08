@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getMovieDetails } from '../../api/omdbApi';
 import { Loader } from '../Loader/Loader';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import './MovieDetail.css';
 
 export const MovieDetail = ({ movieId, onBack }) => {
   const [detail, setDetail] = useState(null);

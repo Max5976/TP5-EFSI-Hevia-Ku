@@ -6,6 +6,7 @@ import { MovieDetail } from './componentes/MovieDetail/MovieDetail';
 import { Loader } from './componentes/Loader/Loader';
 import { ErrorMessage } from './componentes/ErrorMessage/ErrorMessage';
 import './index.css';
+import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -58,6 +59,17 @@ function App() {
 
         {!loading && !error && !selectedMovieId && searched && movies.length === 0 && (
           <ErrorMessage message="No se encontraron películas. Prueba con otro título." />
+        )}
+
+        {!loading && !error && !selectedMovieId && !searched && (
+          <div className="welcome-section">
+            <div className="welcome-content">
+              <p className="welcome-emoji">🍿</p>
+              <h2>¡Bienvenido!</h2>
+              <p>Busca tus películas y series favoritas aquí</p>
+              <p className="welcome-hint">💡 Prueba buscando: "Inception", "Breaking Bad", "Titanic"...</p>
+            </div>
+          </div>
         )}
 
         {!loading && !error && !selectedMovieId && movies.length > 0 && (

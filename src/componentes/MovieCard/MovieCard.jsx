@@ -1,3 +1,5 @@
+import './MovieCard.css';
+
 export const MovieCard = ({ movie, onSelect }) => {
   const posterUrl = movie.Poster !== 'N/A' 
     ? movie.Poster 

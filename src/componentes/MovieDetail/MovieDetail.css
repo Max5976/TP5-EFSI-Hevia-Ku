@@ -1,0 +1,196 @@
+.movie-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 0;
+  animation: fadeInDetail 0.4s ease-out;
+  width: 100%;
+}
+
+.back-btn {
+  align-self: flex-start;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  transform: translateX(-4px);
+}
+
+.back-btn:active {
+  transform: translateX(0);
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+}
+
+.detail-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.detail-content img:hover {
+  transform: scale(1.02);
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-info h2 {
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  color: var(--text-h);
+}
+
+.detail-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.detail-info strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.plot {
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border);
+}
+
+.plot h3 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: var(--text-h);
+}
+
+.plot p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+  text-align: left;
+}
+
+@keyframes fadeInDetail {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .movie-detail {
+    padding: 24px 0;
+  }
+
+  .detail-content {
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+  }
+
+  .detail-info h2 {
+    font-size: 24px;
+  }
+
+  .detail-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-detail {
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .detail-content img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .detail-info h2 {
+    font-size: 22px;
+  }
+
+  .detail-info p {
+    font-size: 13px;
+  }
+
+  .plot p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-detail {
+    padding: 16px 0;
+    gap: 16px;
+  }
+
+  .detail-content img {
+    max-width: 240px;
+  }
+
+  .detail-info h2 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+  }
+
+  .detail-info p {
+    font-size: 12px;
+  }
+
+  .detail-info {
+    gap: 12px;
+  }
+
+  .plot {
+    margin-top: 8px;
+    padding-top: 12px;
+  }
+
+  .plot h3 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+  }
+
+  .plot p {
+    font-size: 12px;
+  }
+
+  .back-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
