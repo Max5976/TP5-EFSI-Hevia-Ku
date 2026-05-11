@@ -1,0 +1,38 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+  gap: 1.67%;
+  padding: 2% 0;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(26%, 1fr));
+    gap: 1.33%;
+    padding: 1.33% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 1.25%;
+    padding: 1% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5%;
+    padding: 0.67% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+    gap: 2.5%;
+    padding: 0.67% 0;
+  }
+}

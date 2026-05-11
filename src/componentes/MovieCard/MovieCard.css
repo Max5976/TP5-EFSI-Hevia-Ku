@@ -1,0 +1,123 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  padding: 4.5% 4.5% 6%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(28, 32, 42, 0.95) 0%, rgba(18, 21, 28, 0.9) 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.movie-card:hover {
+  border-color: rgba(232, 184, 109, 0.45);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(232, 184, 109, 0.15);
+  background: linear-gradient(145deg, rgba(34, 38, 50, 0.98) 0%, rgba(22, 25, 34, 0.95) 100%);
+}
+
+.movie-card img {
+  flex-shrink: 0;
+  width: 100%;
+  aspect-ratio: 300 / 450;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+  filter: brightness(0.92);
+}
+
+.movie-card:hover img {
+  filter: brightness(1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.movie-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  padding: 2% 0 1%;
+}
+
+.movie-card-meta {
+  flex-shrink: 0;
+  margin: auto 0 0;
+  font-size: 81.25%;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.movie-card h3 {
+  flex-shrink: 0;
+  font-size: 100%;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-h);
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.movie-card:hover h3 {
+  color: var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+  .movie-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(251, 247, 240, 0.95) 100%);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .movie-card:hover {
+    border-color: rgba(180, 83, 9, 0.35);
+    box-shadow: 0 14px 32px rgba(15, 17, 24, 0.12);
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 252, 248, 0.98) 100%);
+  }
+
+  .movie-card img {
+    filter: brightness(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    padding: 4% 4% 5.5%;
+    gap: 4.5%;
+    border-radius: 12px;
+  }
+
+  .movie-card img {
+    border-radius: 8px;
+  }
+
+  .movie-card h3 {
+    font-size: 87.5%;
+  }
+
+  .movie-card-meta {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-card {
+    padding: 3.5% 3.5% 5%;
+    gap: 4%;
+  }
+
+  .movie-card img {
+    border-radius: 8px;
+  }
+
+  .movie-card h3 {
+    font-size: 81.25%;
+  }
+}
