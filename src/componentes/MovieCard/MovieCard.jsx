@@ -10,11 +10,7 @@ export const MovieCard = ({ movie, onSelect }) => {
       <img src={posterUrl} alt={`Póster de ${movie.Title}`} />
       <div className="movie-card-info">
         <h3>{movie.Title}</h3>
-<<<<<<< HEAD
         <p className="movie-card-meta">{movie.Year} • {movie.Type}</p>
-=======
-        <p>{movie.Year} • {movie.Type}</p>
->>>>>>> 9c379b75dd216fac25133aebf0c399ca3c2ebc51
       </div>
     </div>
   );
