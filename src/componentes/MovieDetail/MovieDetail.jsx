@@ -54,11 +54,7 @@ export const MovieDetail = ({ movieId, onBack }) => {
           <p><strong>Duración:</strong> {checkData(detail.Runtime)}</p>
           <p><strong>Idioma:</strong> {checkData(detail.Language)}</p>
           <p><strong>País:</strong> {checkData(detail.Country)}</p>
-<<<<<<< HEAD
           <p><strong>IMDb Rating:</strong> {checkData(detail.imdbRating)}</p>
-=======
-          <p><strong>IMDb Rating:</strong> ⭐ {checkData(detail.imdbRating)}</p>
->>>>>>> 9c379b75dd216fac25133aebf0c399ca3c2ebc51
           <div className="plot">
             <h3>Sinopsis:</h3>
             <p>{checkData(detail.Plot)}</p>
